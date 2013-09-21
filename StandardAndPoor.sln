@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardCrawler", "StandardCrawler\StandardCrawler.csproj", "{5C506C29-CFA8-457E-B966-D2A048387AA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardParser", "StandardParser\StandardParser.csproj", "{779A6ADF-0F22-4649-968B-542BE0AB75E8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C506C29-CFA8-457E-B966-D2A048387AA3}.Debug|x86.ActiveCfg = Debug|x86
+		{5C506C29-CFA8-457E-B966-D2A048387AA3}.Debug|x86.Build.0 = Debug|x86
+		{5C506C29-CFA8-457E-B966-D2A048387AA3}.Release|x86.ActiveCfg = Release|x86
+		{5C506C29-CFA8-457E-B966-D2A048387AA3}.Release|x86.Build.0 = Release|x86
+		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Debug|x86.ActiveCfg = Debug|x86
+		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Debug|x86.Build.0 = Debug|x86
+		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Release|x86.ActiveCfg = Release|x86
+		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		StartupItem = StandardCrawler\StandardCrawler.csproj
+	EndGlobalSection
+EndGlobal
