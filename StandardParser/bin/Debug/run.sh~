@@ -1,0 +1,11 @@
+#!/bin/bash
+
+_now=$(date +"%m_%d_%Y")
+_file="/home/rillopy/sp500_$_now.log"
+
+cat "$_file" | mono /home/rillopy/StandardCrawler/StandardParser/bin/Debug/StandardParser.exe 
+
+for file in sp500*.log
+do
+    echo "$file"
+done
