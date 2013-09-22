@@ -45,4 +45,9 @@
       <Name>StandardCrawler</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <None Include="run.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>
