@@ -1,1 +1,10 @@
 Standard & Poor 500 repository scraper
+
+StandardCrawler
+--------------------
+Pulls the listing of the SP 500 stocks from the SP500 site as an Excel file, then parses out the stock tickers. Using a couple different financial websites, scrapes them for the important info (quarterly earnings, stock price).
+
+
+StandardParser
+--------------------
+Using the output of the Crawler to calculate the entire index's earnings and price, outputs the P/E ratio for the entire index
