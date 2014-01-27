@@ -1,18 +1,22 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="StandardParser/run.sh">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="StandardCrawler/Main.cs">
     <Files>
-      <File FileName="StandardCrawler/Main.cs" Line="222" Column="17" />
+      <File FileName="StandardCrawler/Main.cs" Line="221" Column="7" />
       <File FileName="StandardCrawler/Stock.cs" Line="62" Column="6" />
       <File FileName="StandardCrawler/BerkBStock.cs" Line="40" Column="41" />
       <File FileName="StandardParser/Main.cs" Line="29" Column="39" />
       <File FileName="StandardCrawler/run.sh" Line="5" Column="1" />
-      <File FileName="StandardParser/run.sh" Line="11" Column="1" />
+      <File FileName="StandardParser/CalcEngine.cs" Line="1" Column="1" />
+      <File FileName="StandardParser/AssemblyInfo.cs" Line="1" Column="1" />
+      <File FileName="StandardParser/run.sh" Line="13" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="StandardCrawler" expanded="True" />
+        <State expanded="True">
+          <Node name="StandardCrawler" expanded="True">
+            <Node name="Main.cs" selected="True" />
+          </Node>
           <Node name="StandardParser" expanded="True" />
         </State>
       </Pad>

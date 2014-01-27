@@ -68,8 +68,10 @@ namespace StandardCrawler
 						case "ABC":
 						case "ACT":
 						case "ACE":
+						case "ADS":
 						case "AEP":
 						case "AMD":
+						case "AME":
 						case "GAS":
 						case "APH":
 						case "ADM":
@@ -108,6 +110,7 @@ namespace StandardCrawler
 						case "CSX":
 						case "CMI":
 						case "DG":
+						case "DAL":
 						case "DIS":
 						case "DVA":
 						case "DPS":
@@ -119,6 +122,8 @@ namespace StandardCrawler
 						case "FLS":
 						case "FTI":
 						case "FRX":
+						case "GHC":
+						case "GGP":
 						case "HAL":
 						case "HAS":
 						case "HCP":
@@ -132,7 +137,9 @@ namespace StandardCrawler
 						case "KEY":
 						case "KMI":
 						case "L":
+						case "LB":
 						case "LEG":
+						case "LEN":
 						case "LNC":
 						case "LMT":
 						case "LO":
@@ -148,6 +155,7 @@ namespace StandardCrawler
 						case "MMC":
 						case "MRO":
 						case "TAP":
+						case "MCO":
 						case "MON":
 						case "MS":
 						case "MOS":
@@ -158,6 +166,7 @@ namespace StandardCrawler
 						case "NBR":
 						case "NEE":
 						case "NEM":
+						case "NSC":
 						case "NE":
 						case "NI":
 						case "NBL":
@@ -171,6 +180,7 @@ namespace StandardCrawler
 						case "PPL":
 						case "PRU":
 						case "RTN":
+						case "RIG":
 						case "RRC":
 						case "SAI":
 						case "SEE":
@@ -185,6 +195,7 @@ namespace StandardCrawler
 						case "STJ":
 						case "STT":
 						case "STI":
+						case "TE":
 						case "TEL":
 						case "TDC":
 						case "TMO":
@@ -196,6 +207,7 @@ namespace StandardCrawler
 						case "VLO":
 						case "VTR":
 						case "V":
+						case "VAR":
 						case "WM":
 						case "WAT":
 						case "WEC":
@@ -211,6 +223,7 @@ namespace StandardCrawler
 						case "APOL":
 						case "COST":
 						case "FAST":
+						case "FB":
 						case "FITB":
 						case "INTU":
 						case "LIFE":
@@ -222,6 +235,18 @@ namespace StandardCrawler
 						case "BMC":
 							// replace BMC Software with Delta Airlines 
 							symbols [row.Index] = string.Format ("{0}:{1}", "DAL", "NYQ");
+							break;
+						case "DELL":
+							// replace DELL with Transocean
+							symbols [row.Index] = string.Format ("{0}:{1}", "RIG", "NYQ");
+							break;
+						case "NYX":
+							// replace NYX with Michael Kors
+							symbols [row.Index] = string.Format ("{0}:{1}", "KORS", "NYQ");
+							break;
+						case "MOLX":
+							// replace Molex with General Growth Properties
+							symbols [row.Index] = string.Format ("{0}:{1}", "GGP", "NYQ");
 							break;
 						default:
 							symbols [row.Index] = cell.Value.ToString ();
