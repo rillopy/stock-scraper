@@ -63,7 +63,7 @@ namespace StandardCrawler
 			} while ( s == string.Empty && i < 15);
 
 			if (s.IndexOf ("NYQ") == -1 && s.IndexOf ("NSQ") == -1) {
-				throw new Exception (string.Format ("Wrong exchange for {0}", ticker));
+				throw new WrongExchangeException (string.Format ("Wrong exchange for {0}", ticker));
 			}
 
 			HtmlDocument doc = new HtmlDocument ();

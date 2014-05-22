@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="StandardCrawler/Main.cs">
     <Files>
-      <File FileName="StandardCrawler/Main.cs" Line="221" Column="7" />
-      <File FileName="StandardCrawler/Stock.cs" Line="62" Column="6" />
+      <File FileName="StandardCrawler/Main.cs" Line="64" Column="1" />
+      <File FileName="StandardCrawler/Stock.cs" Line="53" Column="3" />
       <File FileName="StandardCrawler/BerkBStock.cs" Line="40" Column="41" />
       <File FileName="StandardParser/Main.cs" Line="29" Column="39" />
       <File FileName="StandardCrawler/run.sh" Line="5" Column="1" />

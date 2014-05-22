@@ -38,15 +38,22 @@ namespace StandardCrawler
 				Stock myStock = null;
 				if ( symbols[key].ToString() == "BRK.B")
 				{
-					myStock = new BerkBStock();
+					myStock = new BerkBStock(); // uses Yahoo exchange 
 				}
 				else{
-					myStock = new Stock (symbols [key].ToString ());
+					myStock = new Stock (symbols [key].ToString ()); // uses Financial Times exchange
 				}
 				Thread.Sleep (r.Next (6000));
 				try {
 					if (myStock != null){
-					myStock.Refresh ();
+					try	{
+						myStock.Refresh ();
+					}
+					catch (WrongExchangeException ex)
+					{
+						//myStock = new Stock(symbols[key].ToString ());
+					}
+
 					Console.WriteLine (string.Format ("{0} {1} {2} {3} {4}", myStock.ticker, myStock.price, myStock.earningsPerShare, myStock.mktCap, myStock.freeFloat));
 					}
 				} catch (Exception e) {
@@ -143,7 +150,6 @@ namespace StandardCrawler
 						case "LNC":
 						case "LMT":
 						case "LO":
-						case "LSI":
 						case "MAC":
 						case "MAR":
 						case "MAS":
@@ -226,10 +232,10 @@ namespace StandardCrawler
 						case "FB":
 						case "FITB":
 						case "INTU":
-						case "LIFE":
 						case "TRIP":
 						case "WFM":
 						case "WIN":
+						case "TSCO":
 							symbols [row.Index] = string.Format ("{0}:{1}", cell.Value.ToString (), "NSQ");
 							break;
 						case "BMC":
@@ -248,6 +254,18 @@ namespace StandardCrawler
 							// replace Molex with General Growth Properties
 							symbols [row.Index] = string.Format ("{0}:{1}", "GGP", "NYQ");
 							break;
+						case "LIFE":
+							// replace Life with Tractor Supply
+							symbols [row.Index] = string.Format ("{0}:{1}", "TSCO", "NSQ");
+							break;
+						case "BEAM":
+							// replace BEAM with Under Armour
+							symbols [row.Index] = string.Format ("{0}:{1}", "UA", "NYQ");
+							break;
+						case "LSI":
+							// replace LSI with AVGO
+							symbols [row.Index] = string.Format ("{0}:{1}", "AVGO", "NSQ");
+							break;							
 						default:
 							symbols [row.Index] = cell.Value.ToString ();
 							break;
