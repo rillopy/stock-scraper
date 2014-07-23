@@ -1,5 +1,6 @@
 using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.OleDb;
 using System.Net;
@@ -35,29 +36,45 @@ namespace StandardCrawler
 
 			foreach (var key in symbols.Keys) {
 
-				Stock myStock = null;
-				if ( symbols[key].ToString() == "BRK.B")
-				{
-					myStock = new BerkBStock(); // uses Yahoo exchange 
-				}
-				else{
-					myStock = new Stock (symbols [key].ToString ()); // uses Financial Times exchange
-				}
-				Thread.Sleep (r.Next (6000));
-				try {
-					if (myStock != null){
-					try	{
-						myStock.Refresh ();
-					}
-					catch (WrongExchangeException ex)
-					{
-						//myStock = new Stock(symbols[key].ToString ());
-					}
+				List<Stock> myStockSourceList = new List<Stock> ();
 
-					Console.WriteLine (string.Format ("{0} {1} {2} {3} {4}", myStock.ticker, myStock.price, myStock.earningsPerShare, myStock.mktCap, myStock.freeFloat));
+				switch (symbols [key].ToString ()) {
+				case "BRK-B":
+				case "BRK.B":
+					myStockSourceList.Add (new YahooStock (symbols [key].ToString ())); // uses Yahoo exchange 
+					break;
+				case "ALLE":
+				case "GHC:NYQ":
+					myStockSourceList.Add (new FinTimesStock (symbols [key].ToString ())); // uses Financial Times exchange
+					break;
+				default:
+						// use both
+					myStockSourceList.Add (new FinTimesStock (symbols [key].ToString ()));
+					myStockSourceList.Add (new YahooStock (symbols [key].ToString ()));
+					break;
+				}
+				 
+				Thread.Sleep (r.Next (1000));
+
+				foreach (Stock myStock in myStockSourceList) {
+					try {
+						if (myStock != null) {
+							try {
+								myStock.Refresh ();
+							} catch (WrongExchangeException ex) {
+								//myStock = new Stock(symbols[key].ToString ());
+								continue;
+							}
+
+							Console.WriteLine (string.Format ("{0} {1} {2} {3} {4}", myStock.ticker, myStock.price, myStock.earningsPerShare, myStock.mktCap, myStock.freeFloat));
+							break;
+						}
+					} catch (Exception e) {
+						if (myStockSourceList.IndexOf(myStock) == myStockSourceList.Count-1) {
+							Console.WriteLine (e.Message);
+						}
+						continue;
 					}
-				} catch (Exception e) {
-					Console.WriteLine (e.Message);
 				}
 			}
 		}
@@ -126,9 +143,9 @@ namespace StandardCrawler
 						case "EMR":
 						case "ESV":
 						case "EOG":
+						case "ESS":
 						case "FLS":
 						case "FTI":
-						case "FRX":
 						case "GHC":
 						case "GGP":
 						case "HAL":
@@ -265,7 +282,11 @@ namespace StandardCrawler
 						case "LSI":
 							// replace LSI with AVGO
 							symbols [row.Index] = string.Format ("{0}:{1}", "AVGO", "NSQ");
-							break;							
+							break;	
+						case "FRX":
+							// replace FRX with AMG
+							symbols [row.Index] = string.Format ("{0}:{1}", "AMG","NYQ");
+							break;
 						default:
 							symbols [row.Index] = cell.Value.ToString ();
 							break;

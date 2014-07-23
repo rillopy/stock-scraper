@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Stock.cs" />
-    <Compile Include="BerkBStock.cs" />
     <Compile Include="WrongExchangeException.cs" />
+    <Compile Include="FinTimesStock.cs" />
+    <Compile Include="Stock.cs" />
+    <Compile Include="ReutersStock.cs" />
+    <Compile Include="YahooStock.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ItemGroup>

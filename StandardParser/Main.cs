@@ -26,7 +26,7 @@ namespace StandardParser
 			}
 
 			CalcEngine calcEngine = new CalcEngine(stocks);
-			Console.WriteLine (string.Format ("{0,14:P3}", (double)calcEngine.TotalMarketCap() / (double)calcEngine.TotalEarnings()/100.0));
+			Console.WriteLine (string.Format ("{0,14:P3}", (double)calcEngine.TotalMarketCapFromFreeFloat() / (double)calcEngine.TotalEarningsFromFreeFloat()/100.0));
 		}
 	}
 }

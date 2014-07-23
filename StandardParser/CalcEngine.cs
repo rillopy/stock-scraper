@@ -24,6 +24,15 @@ namespace StandardParser
 			return mktCap;
 		}
 
+		public Int64 TotalMarketCapFromFreeFloat ()
+		{
+			Int64 mktCap = 0;
+			foreach (Stock s in stockList) {
+				mktCap += (Int64)(s.price * s.freeFloat);
+			}
+			return mktCap;
+		}
+
 		public Int64 TotalEarnings ()
 		{
 			Int64 earnings = 0;
@@ -32,6 +41,16 @@ namespace StandardParser
 			}
 			return earnings;
 		}
+
+		public Int64 TotalEarningsFromFreeFloat ()
+		{
+			Int64 earnings = 0;
+			foreach (Stock s in stockList) {
+				earnings += (Int64)(s.earningsPerShare* s.freeFloat);
+			}
+			return earnings;
+		}
+		
 	}
 }
 

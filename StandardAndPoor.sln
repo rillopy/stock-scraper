@@ -5,6 +5,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardCrawler", "Standard
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StandardParser", "StandardParser\StandardParser.csproj", "{779A6ADF-0F22-4649-968B-542BE0AB75E8}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B5AB51BA-F172-4B67-A08F-88B2A1D84AA7}"
+	ProjectSection(SolutionItems) = preProject
+		deploy.exp = deploy.exp
+		deploy.sh = deploy.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
@@ -19,6 +25,8 @@ Global
 		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Debug|x86.Build.0 = Debug|x86
 		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Release|x86.ActiveCfg = Release|x86
 		{779A6ADF-0F22-4649-968B-542BE0AB75E8}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
 	EndGlobalSection
 	GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = StandardCrawler\StandardCrawler.csproj

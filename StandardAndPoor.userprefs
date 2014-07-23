@@ -1,19 +1,19 @@
 ﻿<Properties GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Release|x86" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.Workbench ActiveDocument="StandardCrawler/Main.cs">
     <Files>
-      <File FileName="StandardCrawler/Main.cs" Line="64" Column="1" />
-      <File FileName="StandardCrawler/Stock.cs" Line="53" Column="3" />
-      <File FileName="StandardCrawler/BerkBStock.cs" Line="40" Column="41" />
-      <File FileName="StandardParser/Main.cs" Line="29" Column="39" />
-      <File FileName="StandardCrawler/run.sh" Line="5" Column="1" />
-      <File FileName="StandardParser/CalcEngine.cs" Line="1" Column="1" />
-      <File FileName="StandardParser/AssemblyInfo.cs" Line="1" Column="1" />
-      <File FileName="StandardParser/run.sh" Line="13" Column="1" />
+      <File FileName="StandardCrawler/Main.cs" Line="64" Column="57" />
+      <File FileName="StandardCrawler/FinTimesStock.cs" Line="33" Column="4" />
+      <File FileName="StandardCrawler/YahooStock.cs" Line="17" Column="19" />
+      <File FileName="StandardCrawler/run.sh" Line="6" Column="27" />
+      <File FileName="StandardCrawler/Stock.cs" Line="18" Column="4" />
+      <File FileName="StandardCrawler/ReutersStock.cs" Line="19" Column="11" />
+      <File FileName="StandardParser/Main.cs" Line="16" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State expanded="True">
+          <Node name="Solution Items" expanded="True" />
           <Node name="StandardCrawler" expanded="True">
             <Node name="Main.cs" selected="True" />
           </Node>
@@ -22,6 +22,12 @@
       </Pad>
       <Pad Id="ClassPad">
         <State expanded="True" selected="True" />
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State>
+          <Value>doc.DocumentNode.InnerHtml</Value>
+          <Value>e</Value>
+        </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
